@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Cursor套件使用</title>
+    <style>
+        body {
+            background-image: 
+            linear-gradient(to right,
+            #00e9ff, #00e8d7, #45e3a2,
+            #85d968, #bbc92e, #d3b800,
+            #eaa400, #ff8c00, #ff7700,
+            #ff5f00, #ff4200, #ff0000);
+            padding: 0;
+            /* background-repeat: no-repeat; */
+    }
+    
+    .card {
+        display: flex;
+        align-items: center;
+        
+        padding: 20px;
+        width: 600px;
+        margin: 0 auto;
+        margin-top:100px;
+        background: rgba(255,255,255,.25);
+        border: 1px solid rgba(255,255,255,.7);
+        border-radius: 5px;
+        box-shadow: 0 20px 50px -10px rgba(0,0,0,.5);
+    }
+    .card:after {
+    filter: blur(8px);
+    content: "";
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255,255,255,.5);
+    width: 100%;
+    left: 0;
+  }
+    .card .left {
+      flex: 0 0 300px;
+      margin-right: 20px;
+    }
+    
+    .card .left img {
+      width: 100%;
+      height: auto;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .card .right {
+      flex: 1;
+    }
+    
+    .card .right h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: rgb(0, 0, 0);
+      position: relative;
+      z-index: 2;
+    }
+    
+    .card .right p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: rgb(0, 0, 0);
+      position: relative;
+      z-index: 2;
+    }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="left">
+          <img src="https://i.pinimg.com/736x/a3/18/ce/a318ced47cba6225109f40c038624216.jpg" alt="Constellation Image">
+        </div>
+        <div class="right">
+          <h2>BOYNEXTDOOR 'How?'</h2>
+          <p>1.	OUR</p>
+          <p>2.	Amnesia</p>
+          <p>3.	So let's go see the stars</p>
+          <p>4.	Earth, Wind & Fire</p>
+          <p>5.	l i f e i s c o o l</p>
+          <p>6.	Dear. My Darling</p>
+          <p>7.	Earth, Wind & Fire（English Ver.）</p>
+
+        </div>
+      </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jQuery-face-cursor.js"></script>
+    <script>
+      $(function(){
+        $(".card").faceCursor();
+      })
+    </script>
+</body>
+</html>
